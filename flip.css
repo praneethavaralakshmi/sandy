@@ -1,0 +1,41 @@
+.card  {
+    width: 250px;
+    height: 200px;
+    transition: transform 5.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,.back {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    border-radius: 30px;
+    position: absolute;
+    backface-visibility: hidden;
+    justify-content:center;
+    align-items:center;
+}
+
+.front {
+    background-color: rgb(108, 226, 247);
+    color:black;
+}
+
+.back {
+    background-color: purple;
+    color:white;
+    transform: rotateY(180deg);
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
